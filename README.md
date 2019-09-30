@@ -45,7 +45,7 @@ public class Program
     public static async void Main()
     {
         //Initialize the RxHttpClient
-        var http = new RxHttpClient(new HttpClient())
+        var http = new RxHttpClient(new HttpClient());
 
         //Retrieve a list of To-Do item and print the title of each element asynchronously
         http.Get<List<Todo>>("https://jsonplaceholder.typicode.com/todos/").Subscribe(itens => {
